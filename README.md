@@ -1,17 +1,17 @@
 # react-to-vue
 
-[![NPM version](https://badgen.net/npm/v/@egoist/react-to-vue)](https://npmjs.com/package/@egoist/react-to-vue) [![NPM downloads](https://badgen.net/npm/dm/@egoist/react-to-vue)](https://npmjs.com/package/@egoist/react-to-vue) [![CircleCI](https://badgen.net/circleci/github/egoist/react-to-vue/master)](https://circleci.com/gh/egoist/react-to-vue/tree/master) [![donate](https://badgen.net/badge/support%20me/donate/ff69b4)](https://patreon.com/egoist) [![chat](https://badgen.net/badge/chat%20on/discord/7289DA)](https://chat.egoist.moe)
+[![NPM version](https://badgen.net/npm/v/@egoist/react-to-vue)](https://npmjs.com/package/@egoist/react-to-vue) [![NPM downloads](https://badgen.net/npm/dm/@egoist/react-to-vue)](https://npmjs.com/package/@egoist/react-to-vue)
 
 ## Install
 
 ```bash
-yarn add @egoist/react-to-vue
+npm i @egoist/react-to-vue
 ```
 
 ## Usage
 
 ```js
-import Vue from 'vue'
+import { createApp, h } from 'vue'
 import React from 'react'
 import toVue from '@egoist/react-to-vue'
 
@@ -22,10 +22,9 @@ const ReactComponent = () => {
 
 const VueComponent = toVue(ReactComponent)
 
-new Vue({
-  el: '#app',
-  render: h => h(VueComponent)
-})
+createApp({
+  render: () => h(VueComponent),
+}).mount('#app')
 ```
 
 ## Contributing
