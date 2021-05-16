@@ -13,7 +13,7 @@ npm i @egoist/react-to-vue
 ```js
 import { createApp, h } from 'vue'
 import React from 'react'
-import toVue from '@egoist/react-to-vue'
+import { toVue } from '@egoist/react-to-vue'
 
 const ReactComponent = () => {
   const [count, setCount] = React.useState(0)
